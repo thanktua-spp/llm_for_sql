@@ -9,11 +9,7 @@ Download poetry with curl: curl -sSL https://install.python-poetry.org | python3
 - Run app server with uvicorn fastapi: uvicorn app_server.app:app --port 8001 --reload
 
 ## Remark:
-<<<<<<< HEAD
-- use my pinecone api key to enable app connection with RAG document storage here: 997a4e62-01df-4260-9b10-94346a24f48c
-=======
 - I will share my pinecone key with you to avoid security issues.
->>>>>>> main
 
 - This is a prof of concept research mechanism to enable me demostrate RAG document + SQL query Engine, it is not production ready yet.
 
