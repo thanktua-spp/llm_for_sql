@@ -1,16 +1,17 @@
 # llm_for_sql
 
+## Dependencies:
+- I used poetry to manage dependencies.
+Download poetry with curl: curl -sSL https://install.python-poetry.org | python3 - --version 1.8.1
 
+- Activate poetry shell and install dependencies from pyproject.toml file.
 
-## Requirements ToDo [KEEP MODIFYING LIST]
-1. Setup llm sql parsers for returning queries from user prompt
-   1.1 create a sample db if possible to retrive the required value.
-3. Setup llm rag based parsers for returning embeding text based on user queries not related to sql to test the rag agent multi-chain functionality.
-   2.1 Set up pinecone/some-other vector DB for rag based retrival
-   2.2 Add a relevent text related to the DB Schema for rag based testing {set up dynamic RAG with user data}
-      create indexing using FAISS/chroma
-      create indexing using pinecone
-4. Start development using poetry for dependency management.
-5. Use langchain tracking to track development
-6. Create endpoint using langchain serving.
-7. Show the architecture diagram
+- Run app server with uvicorn fastapi: uvicorn app_server.app:app --port 8001 --reload
+
+## Remark:
+- use my pinecone api key to enable app connection with RAG document storage here: 997a4e62-01df-4260-9b10-94346a24f48c
+
+- This is a prof of concept research mechanism to enable me demostrate RAG document + SQL query Engine, it is not production ready yet.
+
+## Challenges:
+- Using the SQL schema alone can not guarantee full sql_agent capabilities, I tried to create a dummy database based on the SQL schema with few entries but SQL engine had problems reading and running the records.
